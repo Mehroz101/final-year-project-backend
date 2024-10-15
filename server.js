@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ["*", "https://mehroz101-final-year-project-frontend.vercel.app"],
+    origin: ["*", `${process.env.CLIENT_URL}`],
     methods: ["GET", "POST", "PATCH"],
   },
 });

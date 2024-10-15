@@ -96,7 +96,6 @@ const forget = async (req, res) => {
 
     const resetUrl = `${process.env.CLIENT_URL}/resetpassword/${resetToken}`;
     const message = `You are receiving this email because you (or someone else) has requested a password reset. Please make a PUT request to the following link to complete the process: \n\n${resetUrl}`;
-    console.log("BASE_URL:", process.env.BASE_URL); // This should print "http://localhost:5000"
 
     const isSend = await sendEmail(email, "Password Reset", message);
 
